@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+
+html{
+
+  height: 100%;
+  margin:30px 10% 0px;
+}
+
+body{
+  position: absolute;
+  box-sizing: border-box;
+
+
+}
+
+#basketball{
+  position: absolute;
+  top: 350px;
+  left:100px;
+   z-index: -1;
+  display: block;
+  animation: bounce 1s  infinite;
+
+
+}
+#basketball.hide{
+  display: none;
+}
+
+@keyframes bounce{
+    10%{
+      height:92px;
+      width: 92px;
+
+    }
+    30%{
+      height: 92px;
+      width: 82px;
+
+    }
+    50%{
+        height: 70px;
+        width: 99px;
+        transform: translateY(240px);
+        }
+    75%{
+      height: 60px;
+      width: 99px;
+    }
+    100%{
+      transform: translateY(0px);
+    }
+
+
+}
+#basketballIN{
+  position: absolute;
+  top: 330px;
+  left:110px;
+  perspective: 500px;
+ transform: rotateY(45deg);
+    
+  display: none;
+  animation-name: bucket;
+  transform: : translateX(150);
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+ z-index: -1;
+
+}
+
+@keyframes bucket{
+    from{
+      transform: translateY(-340px) scale(0.9);
+
+
+    }
+    to{
+        transform: translateY(-160px) scale(0.72);
+
+
+    }
+
+}
+#basketballIN.show{
+display: block;
+
+}
+#basketballIN2{
+  position: absolute;
+  top: 230px;
+  left:180px;
+   z-index: -1;  
+  animation: bouncein 1s;
+  display:none;
+
+}
+#basketballIN2.show{
+  display: block;
+}
+
+
+
+.bucket{
+  position: absolute;
+  left: 120px;
+  top: 220px;
+  visibility: hidden;
+
+}
+.board{
+  position: absolute;
+  left:40px;
+}
+#button{
+  background-color: green;
+  border: none;
+  color:white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  position: absolute;
+  top:750px;
+  left: 80px;
+  border-radius: 5px;
+
+}
+
